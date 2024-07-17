@@ -8,29 +8,29 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 ">
     <div class=" flex justify-center items-center md:justify-start md:pr-14">
         <h1 class="font-bold text-blue-950 mb-8 mt-32 text-2xl">سبد دوره های شما</h1>
     </div>
     <!-- prodocts -->
-     <div class=" md:flex md:justify-around">
-    <div class=" flex ">
+     <div class="block md:flex justify-around ">
+    <div class="  flex justify-center gap-y-24 ">
         <!-- single prodoct -->
 <div x-data="{ prodocts: [
-    { id: 1, title: 'دوره حرفه ای متخصص ری اکت', price:'۲,۸۹۸,۰۰۰' },
-    { id: 2, title: 'دوره حرفه ای متخصص جی اس', price:'۸,۲۹۸,۰۰۰' },
-    { id: 3, title: 'دوره حرفه ای متخصص جی اس', price:'۸,۲۹۸,۰۰۰' },
-    { id: 4, title: 'دوره حرفه ای متخصص جی اس', price:'۸,۲۹۸,۰۰۰' }
+    { id: 1, title: 'دوره حرفه ای متخصص ری اکت', price:'۲,۸۹۸,۰۰۰',src:'/assets/images/Untitled.png' },
+    { id: 2, title: 'دوره حرفه ای متخصص جی اس', price:'۸,۲۹۸,۰۰۰',src:'/assets/images/Untitled.png' },
+    { id: 3, title: 'دوره حرفه ای متخصص جی اس', price:'۸,۲۹۸,۰۰۰',src:'/assets/images/Untitled.png' },
+    { id: 4, title: 'دوره حرفه ای متخصص جی اس', price:'۸,۲۹۸,۰۰۰',src:'/assets/images/Untitled.png' }
 
-]}" class="flex flex-wrap justify-around items-start md:max-w-md">
+]}" class="flex-col  justify-around items-center  max-w-2xl">
 <template x-for="prodoct in prodocts" :key="prodoct.id">
-    <div class=" bg-white  flex m-2 justify-around rounded-lg gap-12 px-2 py-3 mb-4 max-h-40 lg:h-44">
+    <div class=" bg-white  flex m-2 justify-around rounded-lg gap-12 px-2 py-3 mb-4 max-h-40 lg:h-44 w-auto">
         <div class= "flex justify-around md:justify-start ">
             <div class="flex justify-center items-center">
-                <img class="object-cover max-w-28 rounded-lg" src="/assets/images/Untitled.png" alt="">
+                <img class="object-cover max-w-28 rounded-lg" :src=prodoct.src alt="">
             </div>
             <div class="flex pr-2 flex-col items-stretch justify-evenly">
-                <p x-text="prodoct.title" class="text-xs whitespace-nowrap font-bold text-blue-900 md:text-lg md:mr-2"></p>
+                <p x-text="prodoct.title" class="text-xs whitespace-nowrap font-bold text-blue-900 sm:text-lg md:mr-2"></p>
                 <div class="flex gap-3 lg:hidden">
                     <div class="flex items-center gap-1">
                         <p x-text="prodoct.price" class="text-blue-500 text-md"></p>
@@ -145,3 +145,12 @@
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
